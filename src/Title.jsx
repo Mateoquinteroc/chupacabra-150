@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <div>
     <h1 className="title">Chupacabra 150</h1>
-    <h2 className="subtitle">es una conmemoracion al jam de dibujo de la Feria del libro de manizales 2023</h2>
+    <h2 className="subtitle">es una conmemoración al jam de dibujo de la Feria del libro de manizales 2023</h2>
     </div>
   );
 };
