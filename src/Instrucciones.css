@@ -1,5 +1,5 @@
 .instrucciones-overlay {
-    position: fixed; /* Fija el overlay en la pantalla */
+    position: absolute; /* Fija el overlay en la pantalla */
     top: 0;
     left: 0;
     width: 100%;
@@ -15,6 +15,7 @@
   
   .instrucciones-content {
     background: #fff; /* Fondo blanco para el contenido */
+    color: black;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
