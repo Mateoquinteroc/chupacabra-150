@@ -1,0 +1,67 @@
+.viewer3d {
+  position: relative;
+  width: min(90vw, 900px);
+  aspect-ratio: 4 / 3;
+  max-height: 75vh;
+  margin: 0 auto 2rem;
+  background-color: rgb(49, 49, 49);
+  border-radius: 30px;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.viewer3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+}
+
+.viewer3d-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  color: aliceblue;
+  border: none;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: clamp(0.85rem, 2.2vw, 1.1rem);
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.viewer3d-overlay-icon {
+  font-size: 2rem;
+}
+
+.viewer3d-exit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  min-height: 40px;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .viewer3d {
+    width: 92vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+  }
+}

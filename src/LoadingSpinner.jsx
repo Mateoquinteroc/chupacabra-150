@@ -1,12 +1,11 @@
-import React from 'react';
 import './LoadingSpinner.css';
 
-const LoadingSpinner = () => {
+const LoadingSpinner = ({ progress = 0 }) => {
   return (
     <div className="spinner-container">
-      <h1>estamos cargando todo</h1>
-      <br></br>
+      <h1>Cargando el visor 3D…</h1>
       <div className="spinner"></div>
+      <p className="spinner-progress">{Math.round(progress)}%</p>
     </div>
   );
 };

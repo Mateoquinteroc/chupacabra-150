@@ -1,36 +1,24 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Asegura que el scroll no se muestre en el body */
+html {
+  scroll-behavior: smooth;
 }
 
-#root {
-  position: relative; /* Permite que el contenido de #root sea posicionado normalmente */
-  width: 100%;
-  height: 100%;
-}
-
-body { 
+body {
   background-color: rgb(68, 67, 67); /* Color de fondo de la página */
 }
 
-.canvas-container {
-  position: relative; /* Posiciona el canvas de manera absoluta dentro del contenedor */
-  top: 40%; /* Mueve el canvas al 50% desde la parte superior del contenedor */
-  left: 50%; /* Mueve el canvas al 50% desde el borde izquierdo del contenedor */
-  transform: translate(-50%, -50%); /* Ajusta el canvas para que esté centrado */
-  width: 90vw; /* Ajusta el ancho del contenedor al 80% del viewport width */
-  height: 80vh; /* Ajusta la altura del contenedor al 100% del viewport height */
-  background-color: rgb(49, 49, 49); /* Color de fondo */
-  margin:0; /* Elimina márgenes adicionales */
-  padding:0; /* Elimina relleno adicional */
-  border-radius: 50px;
-  margin-bottom: 2%;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.canvas {
 
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100%; /* Ocupa toda la altura del contenedor */
+.visor-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  scroll-margin-top: 70px;
+}
+
+#inicio {
+  scroll-margin-top: 70px;
 }

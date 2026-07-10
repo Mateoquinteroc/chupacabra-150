@@ -1,21 +1,40 @@
 .spinner-container {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    gap: 16px;
+    height: 100vh;
+    background-color: rgba(36, 36, 36, 0.95);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
     overflow: hidden;
   }
-  
+
+  .spinner-container h1 {
+    font-size: clamp(1.1rem, 4vw, 1.8rem);
+    margin: 0;
+  }
+
   .spinner {
-    width: 80px;
-    height: 80px;
-    border: 8px solid rgba(0, 0, 0, 0.1);
-    border-top: 8px solid #333;
+    width: 60px;
+    height: 60px;
+    border: 8px solid rgba(255, 255, 255, 0.15);
+    border-top: 8px solid aliceblue;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
-  
+
+  .spinner-progress {
+    margin: 0;
+    font-size: 1rem;
+  }
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -24,4 +43,3 @@
       transform: rotate(360deg);
     }
   }
-  

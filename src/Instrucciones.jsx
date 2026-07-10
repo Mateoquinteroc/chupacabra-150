@@ -1,27 +1,23 @@
-import React, { useState } from 'react';
-import './Instrucciones.css'; // Importa el archivo CSS para estilos
+import './Instrucciones.css';
 
-const Instrucciones = () => {
-  const [isVisible, setIsVisible] = useState(true); // Estado para controlar la visibilidad
-
-  const handleClick = () => {
-    setIsVisible(false); // Oculta el componente al hacer clic
-  };
-
-  if (!isVisible) return null; // No renderiza nada si no está visible
+const Instrucciones = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
 
   return (
-    <div className="instrucciones-overlay" onClick={handleClick}>
-      <div className="instrucciones-content">
-        <h1>Instrucciones de Uso</h1>
-        <p>Para interactuar con la página, sigue estos pasos:</p>
+    <div className="instrucciones-overlay" onClick={onClose}>
+      <div className="instrucciones-content" onClick={(e) => e.stopPropagation()}>
+        <button className="instrucciones-close" onClick={onClose} aria-label="Cerrar instrucciones">
+          ✕
+        </button>
+        <h1>Instrucciones de uso</h1>
+        <p>El visor 3D está desactivado por defecto para que puedas navegar la página con normalidad.</p>
         <ul>
-          <li>Desliza para explorar</li>
-          <li>Usa el scroll para el zoom- acercar alejar</li>
-          <li>Con el click navega orbitalmente si le sumas shift te moveras en un eje fijo</li>
+          <li>Toca el botón &ldquo;Toca para interactuar&rdquo; para activar el modelo 3D</li>
+          <li>Una vez activo, desliza con un dedo (o clic izquierdo) para orbitar</li>
+          <li>Usa el pellizco (o scroll) para hacer zoom, y dos dedos (o clic derecho) para desplazar la vista</li>
+          <li>Toca &ldquo;Salir del modo 3D&rdquo; para volver a navegar la página libremente</li>
         </ul>
-        <p>No puedes estar sobre el rectangulo gris central si lo que quieres es navegar en la pagina</p>
-        <p>Haz clic en cualquier parte para cerrar este mensaje.</p>
+        <p>Puedes volver a ver este mensaje en cualquier momento con el botón &ldquo;Ayuda&rdquo; del menú.</p>
       </div>
     </div>
   );
